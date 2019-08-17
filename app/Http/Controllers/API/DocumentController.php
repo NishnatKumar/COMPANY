@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Validator;
 use App\ImageUpload;
 use App\ReturnData;
+use App\User;
 
 class DocumentController extends Controller
 {
@@ -66,9 +67,16 @@ class DocumentController extends Controller
     /**Get Documents */
     public function getDocuments(Request $request)
     {
+        $user = User::where('userID',$request->userID)->first();
+
+
+
         $document = Document::where('userID',$request->userID)->get();
 
-        return ReturnData::returnData(true,$document);
+
+
+
+        return ReturnData::returnData(true,["document"=>$document,"user"=>$user]);
 
 
     }
