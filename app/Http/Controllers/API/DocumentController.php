@@ -67,7 +67,7 @@ class DocumentController extends Controller
     /**Get Documents */
     public function getDocuments(Request $request)
     {
-        $user = User::where('userID',$request->userID)->first();
+        $user = User::where('id',$request->userID)->first();
 
 
 
