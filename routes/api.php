@@ -23,7 +23,7 @@ Route::post('admins', 'API\UserController@adminregister');
 
 Route::group(['middleware' => 'auth:api'], function(){
 
-    Route::get('users','API\UserController@getUsers');
+    Route::post('users','API\UserController@getUsers');
 
     Route::post('details', 'API\UserController@details');
     Route::post('document-upload', 'API\DocumentController@uploadDocument');
