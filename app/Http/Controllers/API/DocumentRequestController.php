@@ -35,7 +35,7 @@ class DocumentRequestController extends Controller
 
             if($data!= null)
             {
-                return ReturnData::returnData(false,$data);
+                return ReturnData::returnData(true,$data);
             }
             else
             {
