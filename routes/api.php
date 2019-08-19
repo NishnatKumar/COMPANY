@@ -30,6 +30,9 @@ Route::group(['middleware' => 'auth:api'], function(){
 
     Route::post('document-get', 'API\DocumentController@getDocuments');
     Route::post('document-status', 'API\DocumentController@changeStatus');
+
+    Route::post('request-store', 'API\DocumentRequestController@storeRequest');
+    Route::post('request-get', 'API\DocumentRequestController@getRequest');
 });
 
 });
