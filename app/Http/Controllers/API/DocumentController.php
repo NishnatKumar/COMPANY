@@ -17,7 +17,7 @@ class DocumentController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'document' => 'required',
+
 
             'type'=>'required',
             'userID'=>'required'
