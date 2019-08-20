@@ -83,6 +83,7 @@ class UserController extends Controller
             $success['id']  = $user->id;
             $success['address'] = $user->address;
             $success['email']=$user->email;
+            $success['notification']=$user->notification;
 
             return ReturnData::returnData(true,$success);
             // return response()->json(['success'=>$success], $this-> successStatus);
