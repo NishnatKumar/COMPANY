@@ -53,4 +53,10 @@ class DocumentRequestController extends Controller
         return ReturnData::returnData(false,$data);
 
     }
+
+
+    public function sendNotification(Request $request)
+    {
+
+    }
 }
